@@ -1,0 +1,234 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Jost', sans-serif;
+    color: #fff;
+}
+
+main{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(./images/background.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 1em 3em 1em 3em;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav div {
+    display: flex;
+}
+
+.text-nav{
+    display: flex;
+    flex-direction: column;
+}
+
+nav img {
+    margin-left: .5em;
+    margin-top: .2em;
+}
+
+.title {
+    margin-top: auto;
+    text-align: center;
+}
+
+.title h1{
+    font-size: 4em;
+}
+
+.title h2{
+    font-weight: 300;
+}
+
+.mid-container{
+    display: flex;
+    width: 100%;
+    margin-top: auto;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+
+.cards-section{
+    display: flex;
+    justify-content: center;
+}
+
+.cards {
+    background-color: rgba(235, 235, 235, 0.2);
+    backdrop-filter: blur(.5px);
+    border: 2px solid;
+    border-radius: .8em;
+    text-align: center;
+    width: 15em;
+    height: auto;
+    margin-left: 1.5em;
+    padding: 2.5em 0em 2.5em 0em;
+    position: static;
+}
+
+.cards img {
+    width: 5em;
+}
+
+.cards-title{
+    margin-top: .8em;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.cards-text{
+    font-size: .8em;
+    margin-top: .5em;
+}
+
+.status-page{
+   display: flex;
+   justify-content: end;
+   width: 100%;
+   position: relative;
+   z-index: 10;
+   margin-bottom: 2em;
+}
+
+.status-page-container{
+    display: flex;
+    margin-top: 2em;
+    align-items: center;
+}
+
+.status-page-circle{
+    margin-right: 1em;
+    background-color: #fff;
+    border-radius: 100%;
+}
+
+.on-page{
+    height: 1em;
+    width: 1em;
+}
+
+.off-page{
+    height: .6em;
+    width: .6em;
+    background-color: #afafaf;
+}
+
+.arrows{
+    align-items: start;
+    font-size: 1em;
+    font-weight: 150;
+    font-size: 3em;
+    transform: translateY(-190%);
+}
+
+.arrows p {
+    color: #c9c9c9;
+    transform: scaleY(2);
+}
+
+.arrows a {
+    text-decoration: none;
+}
+
+/* Seção sabores locais */
+
+.sabores-locais-section{
+    background-color: black;
+}
+
+.sabores-locais-section header{
+    display: flex;
+}
+
+.sabores-locais-section a{
+    text-decoration: none;
+}
+
+/* --- Modal de Detalhes (Inicialmente Escondido) --- */
+.details-modal {
+    position: fixed; /* Fixa o modal sobre todo o conteúdo */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85); /* Fundo escuro semi-transparente */
+    display: none; /* Esconde o modal por padrão - será mudado pelo JS */
+    z-index: 100; /* Garante que fique acima de todos os outros elementos */
+    justify-content: center;
+    align-items: center;
+}
+
+.details-content {
+    background-color: #1e2d3c; /* Fundo escuro semelhante ao seu header */
+    border-radius: 1em; /* Borda arredondada */
+    padding: 2em;
+    width: 80%; /* Ajuste a largura conforme o necessário */
+    max-height: 90vh;
+    overflow-y: auto; /* Adiciona rolagem se o conteúdo for muito longo */
+    position: relative;
+}
+
+/* --- Título --- */
+.details-title {
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 1em;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/* --- Galeria de Fotos --- */
+.details-gallery {
+    display: flex;
+    justify-content: space-around;
+    gap: 1em;
+    margin-bottom: 2em;
+}
+
+.details-gallery img {
+    width: 30%; /* Três imagens lado a lado */
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 0.5em; /* Borda levemente arredondada nas fotos */
+}
+
+/* --- Tópicos --- */
+.details-topics ul {
+    list-style: disc; /* Ícone de lista padrão */
+    color: #fff;
+    padding-left: 1.5em;
+}
+
+.details-topics li {
+    margin-bottom: 0.8em;
+    font-size: 1.1em;
+    line-height: 1.4;
+}
+
+/* --- Botão Voltar --- */
+.back-button {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.back-button img {
+    width: 40px; /* Tamanho do ícone de seta */ 
+    
+}
+
+.hidden{
+    display: none;
+}
